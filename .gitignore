@@ -1,0 +1,23 @@
+# Dependencias y builds: se generan en el pipeline
+node_modules/
+.next/
+out/
+functions/dist/
+terraform/organization/.build/
+
+# Configuración local: nunca se commitea
+.env
+.env*.local
+terraform.tfvars
+
+# Terraform: el lockfile (.terraform.lock.hcl) sí se commitea, para fijar los providers
+.terraform/
+*.tfstate
+*.tfstate.*
+tfplan
+plan.txt
+
+# Editores y sistema operativo
+.idea/
+.vscode/
+.DS_Store
